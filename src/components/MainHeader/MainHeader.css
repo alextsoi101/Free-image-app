@@ -1,0 +1,140 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background-color: rgba(22, 22, 22, 0.8);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header-logo {
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 80px;
+}
+
+.header-logo-span {
+    color: #1A92C7;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-right: 80px;
+}
+
+.links-li {
+    margin-right: 25px;
+}
+
+.menubtn {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.li-a {
+    font-size: 14px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.li-a:hover {
+    text-decoration: underline;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.dropdown-container {
+    display: flex;
+    justify-content: flex-end;
+    transition: 0.3s;
+}
+
+.dropdown-container.active {
+    opacity: 1;
+    transform: translateY(0);
+    
+}
+
+.dropdown-container.inactive {
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+}
+
+@media all and (max-width: 650px) {
+
+    .header-logo {
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 600;
+        margin-left: 20px;
+    }
+
+    .header-links {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-right: 20px;
+    }
+    
+    .links-li {
+        margin-right: 15px;
+    }
+    
+    .menubtn {
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+
+}
+
+@media all and (max-width: 500px) {
+    .header-logo {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .links-li {
+        margin-right: 12px;
+    }
+
+    .li-a {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    .dropdown-container {
+        display: flex;
+        position: absolute;
+        transition: 0.3s;
+        top: 38px;
+        left: 100%;
+    }
+
+    .dropdown-container.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .dropdown-container.inactive {
+        opacity: 1;
+        transform: translateY(-300px);
+        visibility: hidden;
+    }
+
+}

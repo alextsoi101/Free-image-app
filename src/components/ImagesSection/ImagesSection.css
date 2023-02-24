@@ -1,0 +1,9 @@
+.imagessection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFFFFF;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 50px;
+}

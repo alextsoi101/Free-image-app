@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('./assets/background.png');
+    background-size: 100%;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+@media all and (max-width: 800px) {
+
+    body {
+        background-size: 130%;
+    }
+
+}
+
+@media all and (max-width: 650px) {
+
+    body {
+        background-size: 150%;
+    }
+
+}
+
+@media all and (max-width: 500px) {
+
+    body {
+        background-size: 300%;
+    }
+
+}

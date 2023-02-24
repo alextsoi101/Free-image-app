@@ -1,0 +1,138 @@
+.image-li {
+    cursor: pointer;
+    padding: 10px 10px 10px 10px;
+}
+
+.image-container {
+    box-shadow: 0px 0px 12px -6px rgba(0,0,0,0.78);
+    height: 260px;
+}
+
+.image-overlay {
+    position: absolute;
+    display: none;
+    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9) 100%);
+    width: 370px;
+    height: 260px;
+    transition: 0.2s;
+}
+.image-overlay.active {
+    display: flex;
+}
+.image-overlay:hover {
+    display: flex;
+}
+
+.image-header {
+    display: flex;
+    width: 370px;
+    margin: 20px 20px 0px 20px;
+}
+
+.image-title {
+    color: rgb(255, 255, 255, 0.9);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.image-pic {
+    width: 370px;
+    height: 260px;
+    cursor: pointer;
+}
+
+@media all and (max-width: 800px) {
+
+    .image-container {
+        height: 210px;
+    }
+    
+    .image-overlay {
+        position: absolute;
+        display: none;
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9) 100%);
+        width: 305px;
+        height: 210px;
+        transition: 0.2s;
+    }
+
+    .image-header {
+        display: flex;
+        width: 305px;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .image-pic {
+        width: 305px;
+        height: 210px;
+    }
+
+}
+
+@media all and (max-width: 650px) {
+
+    .image-li {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .image-container {
+        width: 70%;
+        height: 230px;
+        margin-bottom: 20px;
+    }
+    
+    .image-overlay {
+        position: absolute;
+        display: none;
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9) 100%);
+        width: 100%;
+        height: 230px;
+        transition: 0.2s;
+    }
+
+    .image-header {
+        display: flex;
+        width: 90vw;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .image-pic {
+        width: 100%;
+        height: 230px;
+    }
+
+}
+
+@media all and (max-width: 500px) {
+    .image-container {
+        display: flex;
+        justify-content: flex-start;
+        width: 90vw;
+        height: 200px;
+        margin-bottom: 20px;
+    }
+    
+    .image-overlay {
+        position: absolute;
+        display: none;
+        background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.9) 100%);
+        width: 90vw;
+        height: 200px;
+        transition: 0.2s;
+    }
+
+    .image-header {
+        display: flex;
+        width: 85%;
+        margin: 20px 20px 0px 20px;
+    }
+
+    .image-pic {
+        width: 100%;
+        height: 200px;
+    }
+}
