@@ -1,7 +1,7 @@
 import React from "react";
 import DropdownMenu from "./DropdownMenu";
 import { useState, useRef } from "react";
-import './MainHeader.css';
+import '../styles/MainHeader.css';
 
 
 function MainHeader() {
@@ -26,8 +26,12 @@ function MainHeader() {
                 FREE <span className="header-logo-span">IMAGES</span>
             </div>
             <ul className="header-links">
-                <li className="links-li"><a className="li-a" href="https://www.flickr.com/services/api/" target="_blank">API</a></li>
-                <li className="links-li"><a className="li-a" href="https://github.com/alextsoi101" target="_blank">Github</a></li>
+                <li className="links-li">
+                    <a className="li-a" href="https://www.flickr.com/services/api/" target="_blank">API</a>
+                </li>
+                <li className="links-li">
+                    <a className="li-a" href="https://github.com/alextsoi101" target="_blank">Github</a>
+                </li>
                 <li className="menu-item"
                     ref={menu}
                 >

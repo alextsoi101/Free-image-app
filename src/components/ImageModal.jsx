@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef } from "react";
-import cl from "./ImageModal.module.css"
+import cl from "../styles/ImageModal.module.css"
 
 function ImageModal({modalVisible, modalClose, modalTitle, url}) {
 
@@ -10,6 +10,7 @@ function ImageModal({modalVisible, modalClose, modalTitle, url}) {
     }
 
     const webIconDiv = useRef();
+    
     function titleFocus() {
         webIconDiv.current.style.color = "#1a92c7"
         webIconDiv.current.style.textDecoration = "underline"
@@ -35,6 +36,7 @@ function ImageModal({modalVisible, modalClose, modalTitle, url}) {
                         <a className={cl.titlelink}
                             ref={webIconDiv}
                             href={url}
+                            target="_blank"
                             onMouseOver={() => titleFocus()}
                             onMouseLeave={() => titleUnfocus()}
                         >

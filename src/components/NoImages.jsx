@@ -1,5 +1,5 @@
 import React from "react";
-import "./NoImages.css";
+import "../styles/NoImages.css";
 
 function NoImages() {
     return (

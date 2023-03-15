@@ -1,22 +1,26 @@
 import React from "react";
 import LastResults from "./LastResults";
-import { useState } from "react";
-import { useRef } from "react";
-import './SearchSection.css';
+import { useState, useRef, useEffect, useContext } from "react";
+import { PhotoContext } from "../context/PhotoContext";
+import '../styles/SearchSection.css';
 
-function SearchSection({searchFunc}) {
+function SearchSection() {
+
+    const { runSearch } = useContext(PhotoContext);
 
     const [searchArray, setSearchArray] = useState([
-        <div className="last-result">Mountain</div>,
-        <div className="last-result">Forest</div>,
-        <div className="last-result">Sunset</div>,
-        <div className="last-result">Flowers</div>,
-        <div className="last-result">Animals</div>
+        <div className="last-result" onClick={() => runSearch("Mountain")}>Mountain</div>,
+        <div className="last-result" onClick={() => runSearch("Forest")}>Forest</div>,
+        <div className="last-result" onClick={() => runSearch("Sunset")}>Sunset</div>,
+        <div className="last-result" onClick={() => runSearch("Flowers")}>Flowers</div>,
+        <div className="last-result" onClick={() => runSearch("Animals")}>Animals</div>
     ]);
 
-    if (searchArray.length > 5) {
+    useEffect(() => {
+        if (searchArray.length > 5) {
         searchArray.pop()
-    }
+        }
+    }, [searchArray]);
 
     let searchWord;
     function inputValue(inputText) {
@@ -24,19 +28,28 @@ function SearchSection({searchFunc}) {
     };
 
     let searchTag;
-    function newArray() {
-        if (searchWord && searchWord.split('').filter(n => n != " ").length > 0) {
+    function addLastResult() {
+        if (searchWord && searchWord.split('').filter(n => n !== " ").length > 0) {
+            
             if (searchWord.length >= 12) {
                 searchTag = searchWord.slice(0, 12) + '...';
             } else {
                 searchTag = searchWord;
             }
 
-            setSearchArray([<div className="last-result">{searchTag}</div>, ...searchArray]);
+            setSearchArray(
+                [<div 
+                    className="last-result" 
+                    onClick={() => runSearch(searchTag)}
+                >
+                    {searchTag}
+                </div>, ...searchArray]
+            );
         }
     }
 
     const searchIconDiv = useRef();
+
     function activeInput() {
         searchIconDiv.current.style.color = "#1a92c7";
     }
@@ -51,8 +64,10 @@ function SearchSection({searchFunc}) {
             </p>
 
             <div className="search-container">
-                <div className="search-icon-div"
-                    ref={searchIconDiv}>
+                <div 
+                    className="search-icon-div"
+                    ref={searchIconDiv}
+                >
                     <span class="material-symbols-outlined searchicon">
                         search
                     </span>
@@ -66,7 +81,7 @@ function SearchSection({searchFunc}) {
                 />
                 <button
                     className="search-button"
-                    onClick={() => {searchFunc(searchWord); newArray()}}
+                    onClick={() => {runSearch(searchWord); addLastResult()}}
                 >
                     SEARCH
                 </button>

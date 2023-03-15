@@ -1,7 +1,7 @@
 import React from "react";
-import './Gallery.css'
 import NoImages from "./NoImages";
 import Image from "./Image";
+import '../styles/Gallery.css'
 
 function Gallery(props) {
 
@@ -17,7 +17,7 @@ function Gallery(props) {
         let secret = image.secret;
         let title = image.title;
         let url = `https://farm${farm}.staticflickr.com/${server}/${id}_${secret}_m.jpg`;
-        return <Image url={url} key={id} title={title} modalOpen={props.modalOpen}/>;
+        return <Image url={url} key={id} title={title} modalOpen={props.modalOpen} loading={props.loading}/>;
         });
     } else {
         noImages = <NoImages />;

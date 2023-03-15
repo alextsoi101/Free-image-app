@@ -31,7 +31,11 @@
     font-weight: 500;
     margin-bottom: 20px;
     margin-right: 20px;
-    
+    cursor: pointer;
+}
+.last-result:hover {
+    background-color: rgba(12, 100, 138, 0.7);
+    transition: 0.2s;
 }
 
 @media all and (max-width: 800px) {
@@ -79,7 +83,7 @@
     }
 
     .last-search-h6 {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 600;
     }
 
