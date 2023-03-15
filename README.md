@@ -4,7 +4,7 @@
 Demo of project: https://astounding-unicorn-195a0d.netlify.app/
 
 ## Preview: 
-![freeimagesapp](https://user-images.githubusercontent.com/116392740/221322227-27563690-5cd0-4336-9572-3cd22f048348.png)
+![freeimagesapp](https://user-images.githubusercontent.com/116392740/225464508-deb9c39c-fb99-4278-a091-bf77c463b47f.png)
 
 ## Free Images is an app created using React and React hooks 
 Also the images were displayed using the Flickr API and axios to fetch data.
