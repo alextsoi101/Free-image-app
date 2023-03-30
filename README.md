@@ -1,4 +1,4 @@
-# Free Image (React)
+# Free Images App (React)
 #### HTML / CSS / JS / React / Rest API
 
 Demo of project: https://astounding-unicorn-195a0d.netlify.app/
